@@ -50,7 +50,6 @@ targets:
     variables:
       main_catalog: production_catalog
       main_schema: production_schema
-      warehouse_id: 740e74a406d8fbf2
     workspace:
       host: https://adb-7405611583094007.7.azuredatabricks.net/
       # We always use /Users/juandiego.vargasrosales@databricks.com for all resources to make sure we only have a single copy.
