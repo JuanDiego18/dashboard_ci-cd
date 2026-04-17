@@ -7,6 +7,12 @@ include:
   - resources/*.yml
 
 variables:
+  main_catalog:
+    description: Default Catalog to use
+    default: development-catalog
+  main_schema:
+    description: Default Schema to use
+    default: development_schema
   dbt_catalog:
     description: Catalog to use for DBT
     default: development-catalog
@@ -37,13 +43,15 @@ targets:
     mode: development
     default: true
     variables:
+      main_catalog: development-catalog
+      main_schema: development_schema
       dbt_catalog: development_catalog
       dbt_schema: dbt-schema
       #dbt_warehouse: b400fd8ff0fbe95b
       #warehouse_id: b400fd8ff0fbe95b
       dbt_data_notebook_path: /Workspace/Users/juandiego.vargasrosales@databricks.com/.bundle/jd_dabs_project/dev/files/src/dbt_data
     workspace:
-      host: https://adb-7405619207608659.19.azuredatabricks.net/
+      host: https://adb-7405606116379009.9.azuredatabricks.net/
 
   ## Optionally, there could be a 'staging' target here.
   ## (See Databricks docs on CI/CD at https://docs.databricks.com/dev-tools/bundles/index.html. 
@@ -58,13 +66,15 @@ targets:
     # Doing so enables strict verification of the settings below.
     mode: production
     variables:
+      main_catalog: production_catalog
+      main_schema: production_schema
       dbt_catalog: production_catalog
       dbt_schema: dbt-schema
       #dbt_warehouse: 740e74a406d8fbf2
       #warehouse_id: 740e74a406d8fbf2
       dbt_data_notebook_path: /Workspace/Users/juandiego.vargasrosales@databricks.com/.bundle/jd_dabs_project/prod/files/src/dbt_data
     workspace:
-      host: https://adb-7405617012975480.0.azuredatabricks.net/
+      host: https://adb-7405606653490162.2.azuredatabricks.net/
       # We always use /Users/juandiego.vargasrosales@databricks.com for all resources to make sure we only have a single copy.
       # If this path results in an error, please make sure you have a recent version of the CLI installed.
       root_path: /Users/juandiego.vargasrosales@databricks.com/.bundle/${bundle.name}/${bundle.target}
