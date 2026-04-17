@@ -1,0 +1,6 @@
+resources:
+  dashboards:
+    nyc_taxi_trip_analysis:
+      display_name: 'NYC Taxi Trip Analysis'
+      file_path: '../src/NYC Taxi Trips Overview 2026-04-16 18_13_12.lvdash.json'
+      warehouse_id: ${var.warehouse_id}
