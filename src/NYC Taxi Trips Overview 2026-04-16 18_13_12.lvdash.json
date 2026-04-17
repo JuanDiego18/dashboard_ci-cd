@@ -97,7 +97,7 @@
             "spec": {
               "version": 2,
               "frame": {
-                "title": "Average Fare",
+                "title": "Average Fare (CHANGED)",
                 "showTitle": true
               },
               "widgetType": "counter",
@@ -150,7 +150,7 @@
             "spec": {
               "version": 3,
               "frame": {
-                "title": "Top 10 Pickup Zones",
+                "title": "Top 10 Pickup Zones (CHANGED)",
                 "showTitle": true
               },
               "widgetType": "bar",
