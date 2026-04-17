@@ -32,11 +32,6 @@ targets:
     variables:
       main_catalog: development-catalog
       main_schema: development_schema
-      dbt_catalog: development_catalog
-      dbt_schema: dbt-schema
-      #dbt_warehouse: b400fd8ff0fbe95b
-      #warehouse_id: b400fd8ff0fbe95b
-      dbt_data_notebook_path: /Workspace/Users/juandiego.vargasrosales@databricks.com/.bundle/jd_dabs_project/dev/files/src/dbt_data
     workspace:
       host: https://adb-7405606116379009.9.azuredatabricks.net/
 
@@ -57,7 +52,7 @@ targets:
       main_schema: production_schema
       warehouse_id: 740e74a406d8fbf2
     workspace:
-      host: https://adb-7405606653490162.2.azuredatabricks.net/
+      host: https://adb-7405611583094007.7.azuredatabricks.net/
       # We always use /Users/juandiego.vargasrosales@databricks.com for all resources to make sure we only have a single copy.
       # If this path results in an error, please make sure you have a recent version of the CLI installed.
       root_path: /Users/juandiego.vargasrosales@databricks.com/.bundle/${bundle.name}/${bundle.target}
