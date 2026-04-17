@@ -57,7 +57,7 @@
             "spec": {
               "version": 2,
               "frame": {
-                "title": "Total Trips",
+                "title": "Total Trips (CHANGED)",
                 "showTitle": true
               },
               "widgetType": "counter",
